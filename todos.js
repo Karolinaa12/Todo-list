@@ -34,10 +34,7 @@ while (input !== "quit" && input !== "q") {
     } else {
       console.log("Unknown index");
     }
-  } else {
-    input = prompt("I can't understand. Try again or type q to quit");
   }
-
   input = prompt("What would you like to do?");
 }
 
