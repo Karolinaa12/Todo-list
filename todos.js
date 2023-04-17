@@ -26,15 +26,13 @@ while (input !== "quit" && input !== "q") {
     const newTodo = prompt("Add a to do");
     todos.push(newTodo);
     console.log(`${newTodo} added to the list`);
-    console.log(todos);
   } else if (input == "delete") {
     const deleteIndex = parseInt(prompt("Add index to delete"));
-    if (!deleteIndex) {
-      console.log("Unknown index");
-    } else {
+    if (!Number.isNaN(deleteIndex)) {
       todos.splice(deleteIndex, 1);
       console.log(`Todo number ${deleteIndex} deleted`);
-      console.log(todos);
+    } else {
+      console.log("Unknown index");
     }
   } else {
     input = prompt("I can't understand. Try again or type q to quit");
